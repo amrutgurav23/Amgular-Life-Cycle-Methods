@@ -1,0 +1,8 @@
+<app-add-user (userAdded)="onUserAdded($event)"></app-add-user>
+
+<div class="mt-3">
+    <h3>Users List</h3>
+    <button class="btn btn-primary" (click)="OnNameChangeClick()">Change Name</button>
+    <button class="btn btn-danger" (click)="OnDeleteComponent()">Delete Component</button>
+    <app-user *ngFor="let user of usersList" [userNameFromParent]="user" [name]="name"></app-user>
+</div>
